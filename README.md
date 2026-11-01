@@ -1,4 +1,4 @@
-# IEDC Idea Sprint 2026 🚀
+# IEDC Idea Sprint 2026(SUB EXECOM TASK) 🚀
 
 > Official landing page for **IEDC Idea Sprint 2026** — a 24-hour student ideathon hosted by **IEDC BOOTCAMP CEC** (College of Engineering Chengannur) in association with the Kerala Startup Mission (KSUM).
 
