@@ -17,8 +17,8 @@
 --d:"Syne","Trebuchet MS",system-ui,sans-serif;--b:"Sora",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:70px;background:var(--bg)}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.7 var(--b);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-h1,h2,h3{font-family:var(--d);margin:0;line-height:1.05;letter-spacing:-.025em}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.7 var(--b);-webkit-font-smoothing:antialiased;overflow-x:hidden;cursor:default}
+h1,h2,h3{font-family:var(--d);margin:0;line-height:1.05;letter-spacing:-.025em;user-select:none;-webkit-user-select:none}
 h2{font-size:clamp(30px,5.5vw,64px);font-weight:700}
 p{margin:0}a{color:inherit}
 :focus-visible{outline:2px solid var(--amber);outline-offset:3px}
@@ -43,7 +43,7 @@ p{margin:0}a{color:inherit}
 @media(max-width:700px){.nav li.hm{display:none}}
 
 /* portal hero */
-.portal{position:relative;height:250vh}
+.portal{position:relative;height:250vh;user-select:none;-webkit-user-select:none}
 .stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;isolation:isolate;background:var(--bg)}
 .stage>*{position:absolute}
 .img{inset:0;width:100%;height:100%;z-index:0;transform:scale(1.18);transform-origin:50% 50%}
@@ -85,9 +85,9 @@ section.s{padding:clamp(4rem,10vw,8rem) 0;border-top:1px solid var(--line)}
 .btns{display:flex;gap:.7rem;flex-wrap:wrap}
 .deckbox{width:min(100%,420px);margin-inline:auto}
 .deck{position:relative;aspect-ratio:1;touch-action:pan-y;user-select:none;-webkit-user-select:none;cursor:grab}
+.deck:active,.card.drag{transition:none;cursor:grabbing}
 .deck:focus-visible{outline-offset:12px}
-.card{position:absolute;inset:0;background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:clamp(18px,5vw,28px);display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 18px 40px rgba(0,0,0,.55);transition:transform .45s cubic-bezier(.2,.8,.2,1),opacity .3s;will-change:transform}
-.card.drag{transition:none;cursor:grabbing}
+.card{position:absolute;inset:0;background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:clamp(18px,5vw,28px);display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 18px 40px rgba(0,0,0,.55);transition:transform .45s cubic-bezier(.2,.8,.2,1),opacity .3s;will-change:transform;user-select:none;-webkit-user-select:none;cursor:grab}
 .card .code{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--amber)}
 .card h3{font-size:clamp(26px,6vw,38px);font-weight:700}
 .card p{color:var(--ink2);margin-top:.7rem;max-width:26ch}
@@ -127,9 +127,12 @@ tr.key td:first-child{color:var(--amber)}
 form{display:grid;gap:1.2rem}
 .two{display:grid;gap:1.2rem}
 @media(min-width:560px){.two{grid-template-columns:1fr 1fr}}
-label,legend{display:block;padding:0;margin-bottom:.4rem;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink2)}
+label,legend{display:block;padding:0;margin-bottom:.4rem;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink2);cursor:pointer}
+legend{cursor:default}
 .opt{text-transform:none;letter-spacing:0;color:var(--muted)}
 input[type=text],input[type=email],input[type=tel],select{width:100%;min-height:48px;padding:.6rem .1rem;background:transparent;color:var(--ink);border:0;border-bottom:1px solid var(--ink2);border-radius:0;font:400 16px var(--b)}
+input[type=text],input[type=email],input[type=tel]{cursor:text;user-select:auto;-webkit-user-select:auto}
+select{cursor:pointer}
 select option{background:var(--bg2);color:var(--ink)}
 input:focus,select:focus{outline:0;border-bottom-color:var(--amber)}
 .field.bad input,.field.bad select{border-bottom-color:var(--err)}
@@ -157,7 +160,7 @@ fieldset{border:0;margin:0;padding:0}
 .strip ul{list-style:none;margin:.4rem 0 0;padding:0}
 .strip a{display:inline-block;padding:.35rem 0;text-decoration:none;color:var(--ink)}
 .strip a:hover{color:var(--amber)}
-.big{font:800 19.5vw/.8 var(--d);letter-spacing:-.04em;text-transform:uppercase;white-space:nowrap;text-align:center;transform:translateY(20%);color:var(--ink)}
+.big{font:800 19.5vw/.8 var(--d);letter-spacing:-.04em;text-transform:uppercase;white-space:nowrap;text-align:center;transform:translateY(20%);color:var(--ink);pointer-events:none;user-select:none;-webkit-user-select:none}
 
 /* reveals (only when motion allowed) */
 .motion .rv{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
