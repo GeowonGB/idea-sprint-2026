@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IEDC Idea Sprint 2026 | 24-hour student ideathon at CEC</title>
+<meta name="description" content="IEDC Idea Sprint 2026 is a 24-hour student ideathon hosted by IEDC BOOTCAMP CEC. Register your team, pick a problem and pitch a working idea.">
+<meta name="theme-color" content="#0A0C0E">
+<meta property="og:title" content="IEDC Idea Sprint 2026">
+<meta property="og:description" content="A 24-hour student ideathon by IEDC BOOTCAMP CEC.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230A0C0E'/%3E%3Ccircle cx='32' cy='32' r='22' fill='none' stroke='%232E6B72' stroke-width='4'/%3E%3Ccircle cx='32' cy='10' r='5' fill='%23E8913C'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&family=Syne:wght@600;700;800&display=swap">
+<style>
+:root{--bg:#0A0C0E;--bg2:#101317;--ink:#EDE7DC;--ink2:#9EA5A8;--muted:#6C7378;--amber:#E8913C;--teal:#2E6B72;--line:rgba(237,231,220,.13);--err:#FF9E8F;
+--d:"Syne","Trebuchet MS",system-ui,sans-serif;--b:"Sora",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.7 var(--b);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:var(--d);margin:0;line-height:1.05;letter-spacing:-.025em}
+h2{font-size:clamp(30px,5.5vw,64px);font-weight:700}
+p{margin:0}a{color:inherit}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+.skip{position:absolute;left:12px;top:-70px;background:var(--ink);color:var(--bg);padding:10px 16px;z-index:100;font-weight:600}
+.skip:focus{top:70px}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+.lbl{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:.6rem 1.5rem;border:1px solid var(--ink2);border-radius:999px;background:transparent;color:var(--ink);font:500 11px var(--b);letter-spacing:.13em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:border-color .2s,color .2s}
+.btn:hover{border-color:var(--amber);color:var(--amber)}
+.btn.am{border-color:var(--amber);color:var(--amber)}
+.btn.am:hover{background:var(--amber);color:var(--bg)}
+
+/* nav */
+.nav{position:fixed;inset:0 0 auto 0;height:58px;z-index:60;background:rgba(10,12,14,.72);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.mark{font:700 15px var(--d);text-decoration:none;letter-spacing:-.02em}
+.mark b{color:var(--amber)}
+.nav ul{display:flex;align-items:center;gap:1.6rem;list-style:none;margin:0;padding:0}
+.nav ul a:not(.btn){font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;padding:.7rem 0;display:inline-block}
+.nav ul a:not(.btn):hover{color:var(--amber)}
+.nav .btn{min-height:36px;padding:.3rem 1.1rem}
+@media(max-width:700px){.nav li.hm{display:none}}
+
+/* portal hero */
+.portal{position:relative;height:250vh}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;isolation:isolate;background:var(--bg)}
+.stage>*{position:absolute}
+.img{inset:0;width:100%;height:100%;z-index:0;transform:scale(1.18);transform-origin:50% 50%}
+.wash{inset:0;z-index:1;background:linear-gradient(115deg,var(--amber),var(--teal));mix-blend-mode:overlay;opacity:0}
+.veil{inset:0;z-index:2;background:radial-gradient(ellipse at 50% 50%,transparent 35%,rgba(10,12,14,.85) 100%)}
+.panel{top:0;bottom:0;width:51%;z-index:3;background:var(--bg2)}
+.panel.l{left:0;border-right:1px solid var(--line);transform:translateX(-105%)}
+.panel.r{right:0;border-left:1px solid var(--line);transform:translateX(105%)}
+.motion .panel.l,.motion .panel.r{transform:none}
+.dot{z-index:4;left:calc(50% - 5px);top:calc(50% - 5px);width:10px;height:10px;border-radius:50%}
+.dot.a{background:var(--amber)}.dot.t{background:var(--teal)}
+.title{z-index:5;left:0;right:0;top:50%;margin-top:-.55em;font-size:clamp(32px,10vw,168px);font-weight:800;letter-spacing:-.02em;text-transform:uppercase;display:flex;justify-content:center;gap:.28em;white-space:nowrap;line-height:1;transform-origin:50% 50%}
+.title span{display:block}
+.meta{z-index:6;left:0;right:0;pointer-events:none}
+.meta>*{pointer-events:auto}
+.meta.top{top:78px}.meta.bot{bottom:clamp(18px,4vh,40px)}
+.meta .wrap{display:flex;justify-content:space-between;align-items:flex-end;gap:1.2rem;flex-wrap:wrap}
+.cd{display:flex;gap:1.1rem;margin-top:.4rem}
+.cd div{min-width:2.6rem}
+.cd b{display:block;font:700 clamp(24px,5vw,40px)/1 var(--d);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.cd small{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink2)}
+.cd.end b{color:var(--amber)}
+.cta{display:flex;gap:.7rem;flex-wrap:wrap}
+
+/* statement */
+.fold{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:6rem 0;border-top:1px solid var(--line)}
+.statement{font:600 clamp(24px,3.6vw,52px)/1.18 var(--d);letter-spacing:-.025em;max-width:22ch;margin-top:1.2rem}
+.statement em{font-style:normal;color:var(--amber)}
+.num{font:800 clamp(90px,22vw,300px)/.9 var(--d);color:transparent;-webkit-text-stroke:1px rgba(237,231,220,.35);margin-top:2.5rem;letter-spacing:-.04em}
+.orb{position:absolute;right:-14vw;top:50%;width:min(60vw,640px);aspect-ratio:1;margin-top:calc(min(60vw,640px)/-2);border-radius:50%;overflow:hidden;opacity:.28;z-index:0}
+.fold .wrap{position:relative;z-index:1}
+
+.rules{list-style:none;margin:2.2rem 0 0;padding:0;max-width:560px}.rules li{padding:1rem 0;border-top:1px solid var(--line);color:var(--ink2)}.rules b{display:block;font:700 clamp(18px,2.4vw,24px) var(--d);color:var(--ink);letter-spacing:-.02em}
+/* sections */
+section.s{padding:clamp(4rem,10vw,8rem) 0;border-top:1px solid var(--line)}
+.rel{display:grid;gap:3rem;align-items:center}
+@media(min-width:900px){.rel{grid-template-columns:1fr 1fr;gap:5rem}}
+.lede{color:var(--ink2);max-width:42ch;margin:1.1rem 0 1.8rem}
+.btns{display:flex;gap:.7rem;flex-wrap:wrap}
+.deckbox{width:min(100%,420px);margin-inline:auto}
+.deck{position:relative;aspect-ratio:1;touch-action:pan-y;user-select:none;-webkit-user-select:none;cursor:grab}
+.deck:focus-visible{outline-offset:12px}
+.card{position:absolute;inset:0;background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:clamp(18px,5vw,28px);display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 18px 40px rgba(0,0,0,.55);transition:transform .45s cubic-bezier(.2,.8,.2,1),opacity .3s;will-change:transform}
+.card.drag{transition:none;cursor:grabbing}
+.card .code{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--amber)}
+.card h3{font-size:clamp(26px,6vw,38px);font-weight:700}
+.card p{color:var(--ink2);margin-top:.7rem;max-width:26ch}
+.card hr{border:0;border-top:1px solid var(--teal);width:44px;margin:0 0 1rem}
+.hint{display:flex;justify-content:space-between;align-items:center;margin-top:1.6rem;gap:1rem}
+.dots{display:flex;gap:7px}
+.dots i{width:6px;height:6px;border-radius:50%;background:var(--muted)}
+.dots i.on{background:var(--amber)}
+
+/* roster + table */
+.row{display:grid;grid-template-columns:5.5rem 1fr auto;gap:1rem;align-items:baseline;padding:1.3rem 0;border-bottom:1px solid var(--line)}
+.row:first-of-type{border-top:1px solid var(--line)}
+.row .lbl{color:var(--amber)}
+.row b{font:700 clamp(20px,3.4vw,36px) var(--d);letter-spacing:-.02em}
+.row span:last-child{font:600 clamp(18px,3vw,28px) var(--d);font-variant-numeric:tabular-nums}
+.roster{margin-top:2.2rem}
+table{width:100%;border-collapse:collapse;margin-top:2.2rem}
+caption{position:absolute;left:-9999px}
+thead th{font-size:10.5px;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--ink2);text-align:left;padding:.8rem .6rem;border-bottom:1px solid var(--line)}
+tbody td,tbody th{padding:1rem .6rem;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;font-weight:400}
+td:first-child{font:700 18px var(--d);font-variant-numeric:tabular-nums;white-space:nowrap}
+td:nth-child(2){font:600 17px var(--d);letter-spacing:-.01em}
+td:nth-child(3){color:var(--ink2)}
+tr.day th{font:700 13px var(--d);letter-spacing:.02em;color:var(--amber);padding-top:2rem;border-bottom:1px solid var(--ink2)}
+tr.key td:first-child{color:var(--amber)}
+@media(max-width:700px){
+ thead{position:absolute;left:-9999px}
+ tbody tr{display:grid;grid-template-columns:5rem 1fr;column-gap:.8rem;border-bottom:1px solid var(--line);padding:.7rem 0}
+ tbody td,tbody th{border:0;padding:.15rem 0}
+ tr.day{display:block}tr.day th{display:block}
+ td:nth-child(3){grid-column:2}
+}
+
+/* form */
+.reg{display:grid;gap:3rem}
+@media(min-width:900px){.reg{grid-template-columns:.9fr 1.1fr;gap:5rem}}
+form{display:grid;gap:1.2rem}
+.two{display:grid;gap:1.2rem}
+@media(min-width:560px){.two{grid-template-columns:1fr 1fr}}
+label,legend{display:block;padding:0;margin-bottom:.4rem;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink2)}
+.opt{text-transform:none;letter-spacing:0;color:var(--muted)}
+input[type=text],input[type=email],input[type=tel],select{width:100%;min-height:48px;padding:.6rem .1rem;background:transparent;color:var(--ink);border:0;border-bottom:1px solid var(--ink2);border-radius:0;font:400 16px var(--b)}
+select option{background:var(--bg2);color:var(--ink)}
+input:focus,select:focus{outline:0;border-bottom-color:var(--amber)}
+.field.bad input,.field.bad select{border-bottom-color:var(--err)}
+.err{color:var(--err);font-size:13px;margin-top:.35rem}.err:empty{display:none}
+fieldset{border:0;margin:0;padding:0}
+.pills{display:flex;flex-wrap:wrap;gap:.6rem}
+.pills label{margin:0;text-transform:none;letter-spacing:0;font-size:14px;color:var(--ink)}
+.pills input{position:absolute;opacity:0;width:1px;height:1px}
+.pills span{display:inline-flex;align-items:center;min-height:44px;padding:.3rem 1.1rem;border:1px solid var(--ink2);border-radius:999px;cursor:pointer}
+.pills input:checked+span{border-color:var(--amber);color:var(--amber)}
+.pills input:focus-visible+span{outline:2px solid var(--amber);outline-offset:3px}
+.chk{display:flex;gap:.8rem;align-items:flex-start;text-transform:none;letter-spacing:0;font-size:14px;color:var(--ink)}
+.chk input{width:22px;height:22px;flex:none;margin-top:.15rem;accent-color:var(--amber)}
+.sum{color:var(--err);font-size:14px;border-left:2px solid var(--err);padding-left:.8rem}.sum:empty{display:none}
+.done{border-top:1px solid var(--amber);padding-top:1.6rem}
+.done h3{font-size:clamp(28px,5vw,44px)}
+.done p{color:var(--ink2);margin:.8rem 0 1.5rem;max-width:44ch}
+
+/* close */
+.close{padding:clamp(4rem,10vw,8rem) 0 0;border-top:1px solid var(--line);overflow:hidden}
+.close .top{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap}
+.fine{color:var(--ink2);max-width:36ch;margin-top:1rem;font-size:13px}
+.strip{display:grid;gap:1.4rem;margin-top:4rem;padding:1.6rem 0;border-top:1px solid var(--line);font-size:13px}
+@media(min-width:760px){.strip{grid-template-columns:1.2fr 1fr 1fr}}
+.strip ul{list-style:none;margin:.4rem 0 0;padding:0}
+.strip a{display:inline-block;padding:.35rem 0;text-decoration:none;color:var(--ink)}
+.strip a:hover{color:var(--amber)}
+.big{font:800 19.5vw/.8 var(--d);letter-spacing:-.04em;text-transform:uppercase;white-space:nowrap;text-align:center;transform:translateY(20%);color:var(--ink)}
+
+/* reveals (only when motion allowed) */
+.motion .rv{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
+.motion .rv.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="IEDC Idea Sprint 2026, back to top">IEDC Sprint<b>.</b></a>
+    <nav aria-label="Main"><ul>
+      <li class="hm"><a href="#prompts">Prompts</a></li>
+      <li class="hm"><a href="#schedule">Schedule</a></li>
+      <li><a class="btn am" href="#register">Register</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="portal" id="top" aria-label="IEDC Idea Sprint 2026">
+  <div class="stage" id="stage">
+    <svg class="img" id="img" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+      <defs><g id="art">
+        <rect width="400" height="400" fill="#101317"/>
+        <circle cx="200" cy="200" r="178" fill="none" stroke="#2E6B72" stroke-width="12" stroke-dasharray="2.2 44.4"/>
+        <circle cx="200" cy="200" r="150" fill="none" stroke="#EDE7DC" stroke-opacity=".18"/>
+        <circle cx="200" cy="200" r="118" fill="none" stroke="#2E6B72" stroke-opacity=".6" stroke-width="30" stroke-dasharray="420 330" transform="rotate(-90 200 200)"/>
+        <circle cx="200" cy="200" r="66" fill="#0A0C0E" stroke="#E8913C" stroke-width="2"/>
+        <path d="M200 200V138" stroke="#E8913C" stroke-width="4" stroke-linecap="round"/>
+        <path d="M200 200l34 20" stroke="#EDE7DC" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="200" cy="22" r="8" fill="#E8913C"/>
+      </g></defs>
+      <use href="#art"/>
+    </svg>
+    <div class="wash" id="wash"></div>
+    <div class="veil"></div>
+    <div class="panel l" id="pl"></div>
+    <div class="panel r" id="pr"></div>
+    <i class="dot a" id="da"></i><i class="dot t" id="dt"></i>
+    <h1 class="title" id="title" aria-label="IEDC Idea Sprint 2026"><span id="t1" aria-hidden="true">Idea</span><span id="t2" aria-hidden="true">Sprint</span></h1>
+    <div class="meta top"><div class="wrap"><p class="lbl">24-hour student ideathon</p><p class="lbl">Hosted by IEDC BOOTCAMP CEC</p></div></div>
+    <div class="meta bot"><div class="wrap">
+      <div role="timer" aria-label="Countdown to the sprint start">
+        <p class="lbl" id="cd-state">Sprint 2026 starts in</p>
+        <div class="cd" id="cd"><div><b id="cd-d">00</b><small>days</small></div><div><b id="cd-h">00</b><small>hours</small></div><div><b id="cd-m">00</b><small>mins</small></div><div><b id="cd-s">00</b><small>secs</small></div></div>
+        <p class="lbl" id="cd-date" style="margin-top:.5rem">28 Nov 2026, 10:00 IST</p>
+      </div>
+      <div class="cta"><a class="btn am" href="#register">Register your team</a><a class="btn" href="#prompts">Get an idea</a></div>
+    </div></div>
+  </div>
+</section>
+
+<section class="fold" aria-labelledby="st">
+  <svg class="orb" id="orb" viewBox="0 0 400 400" aria-hidden="true" focusable="false"><use href="#art"/></svg>
+  <div class="wrap">
+    <p class="lbl rv">Why 24 hours</p>
+    <h2 class="statement rv" id="st">Twenty-four hours is enough to turn a rough idea into <em>something real.</em></h2>
+    <ul class="rules rv"><li><b>Ship over slides.</b>A working demo beats a perfect deck.</li><li><b>Fail early, fix fast.</b>A broken prototype teaches more than a polished plan.</li><li><b>Show your work.</b>Pitch what you built, not what you plan to build.</li></ul>
+    <p class="num rv" aria-hidden="true">24</p>
+  </div>
+</section>
+
+<section class="s" id="prompts" aria-labelledby="pt">
+  <div class="wrap rel">
+    <div class="rv">
+      <p class="lbl">Starter prompts</p>
+      <h2 id="pt" style="margin-top:1rem">Not sure where to start? Throw a card.</h2>
+      <p class="lede">Six starting points for your team. Drag a card aside, or focus the deck and use the arrow keys. Bring your own problem if you have one.</p>
+      <div class="btns"><a class="btn am" href="#register">Register your team</a><a class="btn" href="#schedule">See the schedule</a></div>
+    </div>
+    <div class="deckbox rv">
+      <div class="deck" id="deck" tabindex="0" role="group" aria-roledescription="card deck" aria-label="Starter prompts. Use the left and right arrow keys to flip cards."></div>
+      <div class="hint"><p class="lbl" id="hint">Drag or use ← →</p><div class="dots" id="dots" aria-hidden="true"></div></div>
+      <p class="lbl" id="dstat" aria-live="polite" style="position:absolute;left:-9999px"></p>
+    </div>
+  </div>
+</section>
+
+<section class="s" aria-labelledby="mt">
+  <div class="wrap">
+    <p class="lbl rv">Key moments</p>
+    <h2 id="mt" class="rv" style="margin-top:1rem">Four times to remember.</h2>
+    <div class="roster rv">
+      <div class="row"><span class="lbl">Day 1</span><b>Check-in opens</b><span>08:30</span></div>
+      <div class="row"><span class="lbl">Day 1</span><b>The sprint starts</b><span>10:00</span></div>
+      <div class="row"><span class="lbl">Day 2</span><b>The sprint ends</b><span>10:00</span></div>
+      <div class="row"><span class="lbl">Day 2</span><b>Results and awards</b><span>13:00</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="schedule" aria-labelledby="sc">
+  <div class="wrap">
+    <p class="lbl rv">Event schedule</p>
+    <h2 id="sc" class="rv" style="margin-top:1rem">Day 1 and Day 2, in full.</h2>
+    <div class="rv"><table>
+      <caption>Schedule for IEDC Idea Sprint 2026</caption>
+      <thead><tr><th scope="col">Time</th><th scope="col">Session</th><th scope="col">What happens</th></tr></thead>
+      <tbody>
+        <tr class="day"><th colspan="3" scope="colgroup">Day 1, Saturday 28 Nov</th></tr>
+        <tr><td>08:30</td><td>Check-in</td><td>Collect your badge and settle at your desk.</td></tr>
+        <tr class="key"><td>10:00</td><td>Opening and sprint starts</td><td>Themes are shared and the clock starts.</td></tr>
+        <tr><td>11:00</td><td>Idea lock-in</td><td>Share your one-line idea with the organisers.</td></tr>
+        <tr><td>13:00</td><td>Lunch</td><td>Take a short break.</td></tr>
+        <tr><td>15:00</td><td>Mentor round 1</td><td>Test your idea with a mentor.</td></tr>
+        <tr><td>19:00</td><td>Dinner and pitch clinic</td><td>Learn to explain your idea in three minutes.</td></tr>
+        <tr><td>22:00</td><td>Night build</td><td>Quiet hours begin.</td></tr>
+        <tr class="day"><th colspan="3" scope="colgroup">Day 2, Sunday 29 Nov</th></tr>
+        <tr><td>00:00</td><td>Midnight check-in</td><td>Organisers visit each team.</td></tr>
+        <tr><td>03:00</td><td>Mentor round 2</td><td>Get feedback on your demo and story.</td></tr>
+        <tr><td>06:30</td><td>Breakfast</td><td>Refuel for the final push.</td></tr>
+        <tr class="key"><td>10:00</td><td>Sprint ends</td><td>Submit your demo and slides.</td></tr>
+        <tr><td>10:30</td><td>Pitches</td><td>Three minutes to pitch, two for questions.</td></tr>
+        <tr class="key"><td>13:00</td><td>Results and awards</td><td>Winners are announced.</td></tr>
+      </tbody></table></div>
+  </div>
+</section>
+
+<section class="s" id="register" aria-labelledby="rt">
+  <div class="wrap reg">
+    <div class="rv">
+      <p class="lbl">Registration</p>
+      <h2 id="rt" style="margin-top:1rem">Save your team's place.</h2>
+      <p class="lede">One person registers for the whole team. Every field is checked before you submit.</p>
+    </div>
+    <div id="holder" class="rv">
+      <form id="f" novalidate aria-labelledby="rt">
+        <div class="sum" id="sum" role="alert"></div>
+        <div class="field"><label for="name">Full name</label><input type="text" id="name" autocomplete="name" required aria-describedby="e-name"><p class="err" id="e-name"></p></div>
+        <div class="two">
+          <div class="field"><label for="email">Email</label><input type="email" id="email" autocomplete="email" inputmode="email" required aria-describedby="e-email"><p class="err" id="e-email"></p></div>
+          <div class="field"><label for="phone">Mobile number</label><input type="tel" id="phone" autocomplete="tel-national" inputmode="numeric" maxlength="10" placeholder="10 digits" required aria-describedby="e-phone"><p class="err" id="e-phone"></p></div>
+        </div>
+        <div class="two">
+          <div class="field"><label for="college">College</label><input type="text" id="college" autocomplete="organization" required aria-describedby="e-college"><p class="err" id="e-college"></p></div>
+          <div class="field"><label for="year">Year of study</label><select id="year" required aria-describedby="e-year"><option value="">Select year</option><option>1st year</option><option>2nd year</option><option>3rd year</option><option>4th year</option><option>Other</option></select><p class="err" id="e-year"></p></div>
+        </div>
+        <div class="field"><label for="team">Team name <span class="opt">(optional)</span></label><input type="text" id="team" maxlength="40"></div>
+        <div class="field"><label for="idea">Your idea in one line <span class="opt">(optional)</span></label><input type="text" id="idea" maxlength="120" placeholder="A problem you want to solve"></div>
+        <fieldset class="field" aria-describedby="e-size"><legend>Team size</legend>
+          <div class="pills">
+            <label><input type="radio" name="size" value="1"><span>Solo</span></label>
+            <label><input type="radio" name="size" value="2"><span>2 people</span></label>
+            <label><input type="radio" name="size" value="3"><span>3 people</span></label>
+            <label><input type="radio" name="size" value="4"><span>4 people</span></label>
+          </div><p class="err" id="e-size"></p></fieldset>
+        <div class="field"><label class="chk" for="agree"><input type="checkbox" id="agree" aria-describedby="e-agree"><span>I will attend all 24 hours on campus and follow the event code of conduct.</span></label><p class="err" id="e-agree"></p></div>
+        <div><button type="submit" class="btn am">Register for Idea Sprint</button></div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="close">
+  <div class="wrap">
+    <div class="top">
+      <div><h2>Your 24 hours start here.</h2><p class="fine">One registration per team. IEDC BOOTCAMP CEC works in association with Kerala Startup Mission.</p></div>
+      <div class="btns"><a class="btn am" href="#register">Register your team</a><a class="btn" href="#top">Back to top</a></div>
+    </div>
+    <div class="strip">
+      <div><p class="lbl">IEDC BOOTCAMP CEC</p><p style="margin-top:.4rem;color:var(--ink2)">College of Engineering Chengannur</p></div>
+      <div><p class="lbl">Contact</p><ul><li><a href="mailto:iedc@example.com">iedc@example.com</a></li><li><a href="tel:+910000000000">+91 00000 00000</a></li></ul></div>
+      <div><p class="lbl">Follow</p><ul><li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li></ul></div>
+    </div>
+  </div>
+  <div class="big" aria-hidden="true">Idea Sprint</div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+var $=function(i){return document.getElementById(i)};
+var root=document.documentElement;
+var reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* countdown: edit START to change the event time */
+var START=new Date("2026-11-28T10:00:00+05:30").getTime(),END=START+864e5;
+var pad=function(n){return String(n).padStart(2,"0")};
+function show(ms){var s=Math.floor(ms/1000);
+  $("cd-d").textContent=pad(Math.floor(s/86400));$("cd-h").textContent=pad(Math.floor(s%86400/3600));
+  $("cd-m").textContent=pad(Math.floor(s%3600/60));$("cd-s").textContent=pad(s%60)}
+function tick(){var n=Date.now();
+  if(n>=END){$("cd").style.display="none";$("cd-date").style.display="none";$("cd-state").textContent="The sprint has ended";return}
+  if(n>=START){$("cd-state").textContent="Sprint is live. Time left";$("cd-date").textContent="Ends 29 Nov 2026, 10:00 IST";show(END-n);return}
+  show(START-n)}
+tick();setInterval(tick,1000);
+
+/* scroll-driven portal (bound to scroll position, so it reverses) */
+if(!reduce){
+  root.classList.add("motion");
+  var portal=$("top"),pl=$("pl"),pr=$("pr"),img=$("img"),wash=$("wash"),da=$("da"),dt=$("dt"),title=$("title"),t1=$("t1"),t2=$("t2"),orb=$("orb"),ticking=false;
+  var clamp=function(v){return Math.min(1,Math.max(0,v))};
+  function frame(){
+    ticking=false;
+    var r=portal.getBoundingClientRect(),p=clamp(-r.top/(r.height-window.innerHeight));
+    pl.style.transform="translateX("+(-p*105)+"%)";pr.style.transform="translateX("+(p*105)+"%)";
+    img.style.transform="scale("+(1.18-.18*p)+")";wash.style.opacity=(.32*p).toFixed(3);
+    var w=window.innerWidth*.38,h=window.innerHeight*.3;
+    da.style.transform="translate("+(-p*w)+"px,"+(-p*h)+"px)";dt.style.transform="translate("+(p*w)+"px,"+(p*h)+"px)";
+    title.style.transform="scale("+(1+.28*p)+")";title.style.letterSpacing=(-.02-.035*p)+"em";
+    t1.style.transform="translateX("+(-p*50)+"%)";t2.style.transform="translateX("+(p*50)+"%)";
+    var y=window.scrollY;orb.style.transform="translateY("+(-y*.04)+"px) rotate("+(y*.03)+"deg)";
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(frame)}}
+  window.addEventListener("scroll",onScroll,{passive:true});window.addEventListener("resize",onScroll);frame();
+  /* one-time reveals */
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12});
+    document.querySelectorAll(".rv").forEach(function(el){io.observe(el)});
+  }else{document.querySelectorAll(".rv").forEach(function(el){el.classList.add("in")})}
+}
+
+/* throwable deck */
+var CARDS=[["IS-01","Campus life","Fix one daily annoyance for students."],["IS-02","Local business","Help a small shop or market vendor reach more people."],["IS-03","Learning","Make a hard topic easy to learn in ten minutes."],["IS-04","Less waste","Cut waste or energy use in a hostel, canteen or home."],["IS-05","Getting around","Make travel around town simpler and safer."],["IS-06","Open theme","Bring your own problem and prove it is real."]];
+var deck=$("deck"),dots=$("dots"),els=[],top=0,n=CARDS.length,busy=false;
+CARDS.forEach(function(c,i){
+  var d=document.createElement("div");d.className="card";
+  d.innerHTML='<div><hr><p class="code"></p></div><div><h3></h3><p></p></div>';
+  d.querySelector(".code").textContent=c[0];d.querySelector("h3").textContent=c[1];d.querySelector("div:last-child p").textContent=c[2];
+  deck.appendChild(d);els.push(d);var dt=document.createElement("i");dots.appendChild(dt);
+});
+function stack(){
+  els.forEach(function(el,k){
+    var rel=(k-top+n)%n,vis=rel<4;
+    el.style.zIndex=n-rel;el.style.opacity=vis?1:0;el.style.pointerEvents=rel===0?"auto":"none";
+    el.style.transform="translate("+(rel*11)+"px,"+(-rel*7)+"px) scale("+(1-rel*.045)+") rotate("+(rel*1.6)+"deg)";
+    el.setAttribute("aria-hidden",rel===0?"false":"true");
+  });
+  dots.querySelectorAll("i").forEach(function(d,i){d.className=i===top?"on":""});
+  $("dstat").textContent=CARDS[top][1]+", card "+(top+1)+" of "+n;
+}
+function throwCard(dir){
+  if(busy)return;busy=true;var el=els[top],w=deck.offsetWidth;
+  el.classList.remove("drag");
+  el.style.transform="translate("+(dir*w*1.1)+"px,-24px) rotate("+(dir*18)+"deg)";el.style.opacity=0;
+  setTimeout(function(){top=(top+1)%n;el.style.transition="none";stack();void el.offsetWidth;el.style.transition="";busy=false},reduce?0:380);
+}
+var sx=0,drag=false,dx=0;
+deck.addEventListener("pointerdown",function(e){if(busy)return;drag=true;sx=e.clientX;dx=0;deck.setPointerCapture(e.pointerId);els[top].classList.add("drag")});
+deck.addEventListener("pointermove",function(e){if(!drag)return;dx=e.clientX-sx;els[top].style.transform="translate("+dx+"px,0) rotate("+(dx/18)+"deg) scale(1.02)"});
+function end(){if(!drag)return;drag=false;var el=els[top];el.classList.remove("drag");
+  if(Math.abs(dx)>deck.offsetWidth*.1){throwCard(dx>0?1:-1)}else{stack()}dx=0}
+deck.addEventListener("pointerup",end);deck.addEventListener("pointercancel",end);
+deck.addEventListener("keydown",function(e){if(e.key==="ArrowRight"){e.preventDefault();throwCard(1)}else if(e.key==="ArrowLeft"){e.preventDefault();throwCard(-1)}});
+stack();
+
+/* registration validation */
+var f=$("f");
+var R={
+ name:function(v){v=v.trim();return v.length<2?"Enter your full name.":/^[A-Za-z .'\-]+$/.test(v)?"":"Use letters only in your name."},
+ email:function(v){v=v.trim();return !v?"Enter your email address.":/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)?"":"Enter a valid email, like name@college.edu."},
+ phone:function(v){return !v?"Enter your mobile number.":/^[6-9]\d{9}$/.test(v)?"":"Enter 10 digits starting with 6, 7, 8 or 9."},
+ college:function(v){return v.trim().length<3?"Enter your college name.":""},
+ year:function(v){return v?"":"Select your year of study."}};
+function setE(k,m){var el=$(k);$("e-"+k).textContent=m;if(el){el.setAttribute("aria-invalid",m?"true":"false");var fd=el.closest(".field");if(fd)fd.classList.toggle("bad",!!m)}}
+function chk(k){var m=R[k]($(k).value);setE(k,m);return m}
+Object.keys(R).forEach(function(k){$(k).addEventListener("blur",function(){chk(k)});$(k).addEventListener("input",function(){if($("e-"+k).textContent)chk(k)})});
+$("phone").addEventListener("input",function(){this.value=this.value.replace(/\D/g,"")});
+f.addEventListener("submit",function(ev){
+  ev.preventDefault();var errs=0,first=null;
+  Object.keys(R).forEach(function(k){if(chk(k)){errs++;first=first||$(k)}});
+  var sz=f.querySelector('input[name="size"]:checked');
+  $("e-size").textContent=sz?"":"Choose your team size.";if(!sz){errs++;first=first||f.querySelector('input[name="size"]')}
+  var ag=$("agree").checked;setE("agree",ag?"":"Please confirm to continue.");if(!ag){errs++;first=first||$("agree")}
+  if(errs){$("sum").textContent="Fix "+errs+(errs>1?" fields":" field")+" and submit again.";first.focus();return}
+  $("sum").textContent="";var nm=$("name").value.trim().split(" ")[0],tm=$("team").value.trim();
+  $("holder").innerHTML='<div class="done" id="done" role="status" tabindex="-1"><h3></h3><p></p><button type="button" class="btn am" id="again">Register another team</button></div>';
+  var d=$("done");d.querySelector("h3").textContent="You're in, "+nm+".";
+  d.querySelector("p").textContent=(tm?"Team "+tm+" is":"Your team is")+" registered for IEDC Idea Sprint 2026. Bring a laptop, a charger and your best idea.";
+  d.focus();$("again").addEventListener("click",function(){location.reload()});
+});
+})();
+</script>
+</body>
+</html>
